@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CustomInteractionManager : MonoBehaviour
 {
+
+    public GameObject selectedObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +18,10 @@ public class CustomInteractionManager : MonoBehaviour
     {
         
     }
+
+    public void ListSelectedObject(GameObject painting){
+        selectedObject = painting;
+    }
+
+    
 }
