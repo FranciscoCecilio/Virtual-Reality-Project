@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.XR;
 using UnityEngine;
+using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Painting : MonoBehaviour
@@ -9,8 +9,8 @@ public class Painting : MonoBehaviour
     public XRSimpleInteractable abc;
     
     // On Selected stuff
-    public Material semiTransparentMaterial;
-    public Material originalMaterial;
+    [SerializeField] private Material semiTransparentMaterial;
+    [SerializeField] private Material defaultMaterial;
     BoxCollider collider;
 
 
@@ -19,7 +19,7 @@ public class Painting : MonoBehaviour
     void Start()
     {
         collider = GetComponent<BoxCollider>();
-        originalMaterial = GetComponent<Material>();
+        defaultMaterial = GetComponent<Material>();
         
     }
 
@@ -40,10 +40,16 @@ public class Painting : MonoBehaviour
 
         // desligar o collider
         collider.enabled = false;
+        // mudar a transparência
+        GetComponent<Renderer>().material = semiTransparentMaterial;
 
         // informar o Interaction Manager que o cubo esta a ser selecionado para ser movido
-        
 
         //guardar o interactor 
+    }
+
+    public void OnDeselectedCustom(){
+        Debug.Log(gameObject.name + " was deselected.");
+        GetComponent<Renderer>().material = defaultMaterial;
     }
 }
