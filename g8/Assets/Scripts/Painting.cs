@@ -7,11 +7,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Painting : MonoBehaviour
 {
-    public XRSimpleInteractable abc;
+    //public XRSimpleInteractable abc;
     
     // On Selected stuff
     [SerializeField] private Material semiTransparentMaterial;
     [SerializeField] private Material defaultMaterial;
+    [SerializeField] public GameObject quadArt;
 
     // when paintings are prefabs we need to find another way to assign the debugtext
     BoxCollider myCollider;

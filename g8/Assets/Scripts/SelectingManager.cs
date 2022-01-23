@@ -29,7 +29,7 @@ public class SelectingManager : MonoBehaviour
         DebugText.text += "\nObject listed: "+ painting.name;
         selectedObject = painting;
         // now, we only want to select Walls
-        LayerMask mask = LayerMask.GetMask("Walls");
+        LayerMask mask = LayerMask.GetMask("Walls","UI");
         interactor.raycastMask = mask;
     }
     
@@ -56,6 +56,35 @@ public class SelectingManager : MonoBehaviour
                 
             }
         }
+    }
+
+
+    public void ArtButtonSelected(){
+        // the art button sends the correct paintings to the WristUI
+        // open the WristUI
+
+        // Go to the grid and for each slot find its Image component and replace it with the thematic art
+
+
+    }
+
+
+    public void UIpaintingSelected(Image image){
+        // check if there is listedPainting
+        if(selectedObject!=null){
+            // find the selectedObject Image component and replace it.
+            selectedObject.GetComponent<Painting>().quadArt.GetComponent<Renderer>().material.mainTexture = image.mainTexture;
+            // make UI painting slot unnavailable ? - not if we want to place the same painting multiple times.
+            image.sprite = null;
+            // unlist the selected painting
+            UnListObject();
+        }
+        else{
+            // UI message "There is no painting selected".
+            DebugText.text += "\nThere is no SelectedPainting";
+        }
+        
+        
     }
 
 }
