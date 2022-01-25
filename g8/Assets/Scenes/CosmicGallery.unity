@@ -2229,6 +2229,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f359d08a9bf58d4996f913a3684fe8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showFPS: 0
+  useDefaultFps: 1
+  customFps: 0
+  screenFade: 0
+  eyeTracking: 0
+  supportEyeTracking: 0
+  foveationLevel: -1
+  systemDebugFFRLevel: -1
+  systemFFRLevel: -1
+  appCheckResult: 100
+  useRecommendedAntiAliasingLevel: 1
 --- !u!114 &829611231
 MonoBehaviour:
   m_ObjectHideFlags: 0
