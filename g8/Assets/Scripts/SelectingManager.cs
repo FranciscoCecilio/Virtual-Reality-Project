@@ -8,7 +8,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class SelectingManager : MonoBehaviour
 {
 
-    public GameObject selectedObject;
+    public Painting selectedPainting;
     public Text DebugText;
     public XRRayInteractor interactor;
     // Raycast Layer Mask - changes to green to validate targets
@@ -25,32 +25,32 @@ public class SelectingManager : MonoBehaviour
         
     }
 
-    public void ListSelectedObject(GameObject painting){
+    public void ListSelectedPainting(Painting painting){
         DebugText.text += "\nObject listed: "+ painting.name;
-        selectedObject = painting;
+        selectedPainting = painting;
         // now, we only want to select Walls
         LayerMask mask = LayerMask.GetMask("Walls","UI");
         interactor.raycastMask = mask;
     }
     
     public void UnListObject(){
-        DebugText.text += "\n" + selectedObject.name + " unlisted";
-        selectedObject.GetComponent<Painting>().OnDeselectedCustom();
-        selectedObject = null;
+        DebugText.text += "\n" + selectedPainting.name + " unlisted";
+        selectedPainting.OnDeselectedCustom();
+        selectedPainting = null;
         // replace the original layermask
         interactor.raycastMask = LayerMask.GetMask("InteractibleObjects", "UI");
     }
 
 
     public void WallSelected(SelectEnterEventArgs args){
-        DebugText.text += "\nWall+selected: " + selectedObject.name;
+        DebugText.text += "\nWall+selected: " + selectedPainting.name;
         // If we have a painting ready to be moved
-        if(selectedObject != null){
+        if(selectedPainting != null){
             RaycastHit hit;
             if(((XRRayInteractor) args.interactorObject).TryGetCurrent3DRaycastHit(out hit)){
-                DebugText.text += "\n"+ hit.point + " " + selectedObject.name;
-                selectedObject.transform.position = hit.point;
-                selectedObject.transform.forward = -1*hit.normal;
+                DebugText.text += "\n"+ hit.point + " " + selectedPainting.name;
+                selectedPainting.transform.position = hit.point;
+                selectedPainting.transform.forward = -1*hit.normal;
                 
                 UnListObject();
                 
@@ -71,9 +71,9 @@ public class SelectingManager : MonoBehaviour
 
     public void UIpaintingSelected(Image image){
         // check if there is listedPainting
-        if(selectedObject!=null){
-            // find the selectedObject Image component and replace it.
-            selectedObject.GetComponent<Painting>().quadArt.GetComponent<Renderer>().material.mainTexture = image.mainTexture;
+        if(selectedPainting!=null){
+            // find the selectedPainting Image component and replace it.
+            selectedPainting.quadArt.GetComponent<Renderer>().material.mainTexture = image.mainTexture;
             // make UI painting slot unnavailable ? - not if we want to place the same painting multiple times.
             image.sprite = null;
             // unlist the selected painting

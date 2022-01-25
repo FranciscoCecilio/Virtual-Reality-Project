@@ -52,7 +52,7 @@ public class Painting : MonoBehaviour
         StartCoroutine(DeselectTimeout());
 
         // inform Selecting Manager of the painting being selected
-        sM.ListSelectedObject(gameObject);
+        sM.ListSelectedPainting(gameObject.GetComponent<Painting>());
         
     }
 
