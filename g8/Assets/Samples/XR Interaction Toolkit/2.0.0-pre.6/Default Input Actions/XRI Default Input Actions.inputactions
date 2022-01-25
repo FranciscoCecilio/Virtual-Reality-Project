@@ -1096,6 +1096,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "UI",
+            "id": "df21d09e-2a15-427f-8e3f-96e07cbccd64",
+            "actions": [
+                {
+                    "name": "Toggle WristMenu",
+                    "type": "Button",
+                    "id": "057ca147-f2ed-4d71-b49c-1eaed28ee9f6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a8c7c196-6409-4f04-8fbb-a0698a404bdb",
+                    "path": "<PXR_Controller>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Toggle WristMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
