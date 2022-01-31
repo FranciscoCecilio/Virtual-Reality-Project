@@ -14,7 +14,6 @@ public class Teleporting : MonoBehaviour
         {
             other.transform.position = teleportTarget.transform.position;
             RenderSettings.skybox = material;
-        
         }
     }
 }
