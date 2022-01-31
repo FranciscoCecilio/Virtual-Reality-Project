@@ -5,10 +5,17 @@ using UnityEngine;
 public class Teleporting : MonoBehaviour
 {
     public Transform teleportTarget;
-    public GameObject thePlayer;
+    public Material material;
 
-    void onTriggerEnter(Collider other)
+
+    void OnTriggerEnter(Collider other)
     {
-        thePlayer.transform.position = teleportTarget.transform.position;
+        if (other.tag == "Player")
+        {
+            other.transform.position = teleportTarget.transform.position;
+            RenderSettings.skybox = material;
+        
+        }
+        Debug.Log(other.name);
     }
 }

@@ -70,7 +70,7 @@ public class MatrixMaker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -80,7 +80,6 @@ public class MatrixMaker : MonoBehaviour
         Debug.Log(Matrix.Count);
         if (Matrix.Count > 0)
             Debug.Log(Matrix[0].Count);
-
         Visualize(Matrix);
     }
 }
