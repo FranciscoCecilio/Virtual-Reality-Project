@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class SelectingManager : MonoBehaviour
@@ -10,8 +11,21 @@ public class SelectingManager : MonoBehaviour
     public Painting selectedPainting;
     public Text DebugText;
     public XRRayInteractor interactor;
-    // Raycast Layer Mask - changes to green to validate targets
+    public InputActionReference resizingReference = null; //for resizing paintings
 
+    void Awake()
+    {
+        resizingReference.action.started += ResizePainting;
+    }
+    
+    void OnDestroy(){
+        resizingReference.action.started -= ResizePainting;
+    }
+
+    private void ResizePainting(InputAction.CallbackContext context){
+
+        
+    }
 
     public void ListSelectedPainting(Painting painting){
         DebugText.text += "\nObject listed: "+ painting.name;
@@ -39,7 +53,6 @@ public class SelectingManager : MonoBehaviour
                 DebugText.text += "\n"+ hit.point + " " + selectedPainting.name;
                 selectedPainting.transform.position = hit.point;
                 selectedPainting.transform.forward = -1*hit.normal;
-                
                 UnListObject();
                 
             }

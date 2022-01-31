@@ -364,17 +364,6 @@
                 },
                 {
                     "name": "",
-                    "id": "71a4d23f-3e9a-4513-923b-ba388c5e84bf",
-                    "path": "<XRController>{LeftHand}/gripPressed",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Generic XR Controller",
-                    "action": "Select",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "487f4f2e-9e9b-49aa-b0f2-4037a24624f5",
                     "path": "<XRController>{LeftHand}/triggerPressed",
                     "interactions": "",
@@ -888,19 +877,8 @@
                 },
                 {
                     "name": "",
-                    "id": "1ce80054-410d-4112-a332-50faa7fb4f23",
-                    "path": "<XRController>{RightHand}/gripPressed",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Generic XR Controller",
-                    "action": "Select",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "7765c4f9-75c9-4bd2-b031-9545350db9e6",
-                    "path": "<PXR_Controller>{RightHand}/gripPressed",
+                    "path": "<PXR_Controller>{RightHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -1120,6 +1098,62 @@
                     "processors": "",
                     "groups": "",
                     "action": "Toggle WristMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "ResizingLeft",
+            "id": "94dd5e74-b97b-424d-9f1c-c1035632956c",
+            "actions": [
+                {
+                    "name": "Resizing Painting",
+                    "type": "Button",
+                    "id": "a7b94d13-b082-4664-b341-0eb9cf8b5899",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "15f0b8dc-aea9-4e6f-a3ef-5c8dc1c599b1",
+                    "path": "<PXR_Controller>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Resizing Painting",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "ResizingRight",
+            "id": "d3928baa-f6ef-47f1-8386-0ffc755d3c5a",
+            "actions": [
+                {
+                    "name": "Resizing Painting",
+                    "type": "Button",
+                    "id": "5f4dec04-23ac-4670-8c27-6ee297455095",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "be2f315f-51e7-4aae-a65b-752997e48b1e",
+                    "path": "<PXR_Controller>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Resizing Painting",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

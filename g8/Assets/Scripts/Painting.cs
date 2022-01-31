@@ -35,25 +35,17 @@ public class Painting : MonoBehaviour
     {
     }
 
-    // when the painting is selected, it becomes moveable until we press Grip again.
+    // when the painting is selected, it becomes moveable until we press Trigger button again.
     public void OnSelectedCustom(SelectEnterEventArgs args){
-        /*RaycastHit hit;
-        if(((XRRayInteractor) args.interactorObject).TryGetCurrent3DRaycastHit(out hit)){
-            Vector3 t = hit.point;
-        }*/
-
         // deactivate the collider
         myCollider.enabled = false;
         // change material
         GetComponent<Renderer>().material = semiTransparentMaterial;
-
         // The user has 5 seconds to pick a new position
         selected = true;
         StartCoroutine(DeselectTimeout());
-
         // inform Selecting Manager of the painting being selected
         sM.ListSelectedPainting(gameObject.GetComponent<Painting>());
-        
     }
 
     // method called by the SelectingManager 
