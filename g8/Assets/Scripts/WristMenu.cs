@@ -1,27 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 using UnityEngine;
 
 public class WristMenu : MonoBehaviour
 {
     public GameObject wristUI;
-    public bool activeWristUI = false;
+    public InputActionReference toggleReference = null; //for toggle UI Wrist
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        DisplayWristUI();
+        toggleReference.action.started += ToggleWristUI;
     }
 
-    
-    public void DisplayWristUI(){
-        if(activeWristUI){
-            wristUI.SetActive(false);
-            activeWristUI = false;
-        }
-        else if(!activeWristUI){
-            wristUI.SetActive(true);
-            activeWristUI = true;
-        }
+    void OnDestroy(){
+        toggleReference.action.started -= ToggleWristUI;
+    }
+
+    private void ToggleWristUI(InputAction.CallbackContext context){
+        bool isActive = !gameObject.activeSelf;
+        gameObject.SetActive(isActive);
     }
 }
