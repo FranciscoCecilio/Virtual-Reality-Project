@@ -16,6 +16,5 @@ public class Teleporting : MonoBehaviour
             RenderSettings.skybox = material;
         
         }
-        Debug.Log(other.name);
     }
 }

@@ -29,6 +29,7 @@ public class MainMenu : MonoBehaviour
             optionsActive = false;
             optionsMenu.SetActive(false);
         }
+
     }
     
 }
