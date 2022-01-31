@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5040828891522100781}
   - component: {fileID: 5330967495833751088}
   - component: {fileID: 3669264146522010158}
+  - component: {fileID: 6556881203249766140}
   m_Layer: 0
   m_Name: Grid element
   m_TagString: Untagged
@@ -132,3 +133,17 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6556881203249766140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6026600477282950943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c98c8c7fb6ac3e4dadca4e682c97387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  images: []
+  imageComponent: {fileID: 0}
