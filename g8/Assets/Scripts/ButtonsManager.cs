@@ -9,4 +9,9 @@ public class ButtonsManager : MonoBehaviour
     public void MainMenu(){
         SceneManager.LoadScene("MainMenu");
     }
+
+    // reset game
+
+    // end game + see the results
+    
 }
