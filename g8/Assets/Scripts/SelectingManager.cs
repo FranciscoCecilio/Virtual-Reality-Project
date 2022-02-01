@@ -40,11 +40,11 @@ public class SelectingManager : MonoBehaviour
         if(selectedPainting != null){
             RaycastHit hit;
             if(((XRRayInteractor) args.interactorObject).TryGetCurrent3DRaycastHit(out hit)){
-                DebugText.text += "\n"+ hit.point + " " + selectedPainting.name;
+                float zRot = selectedPainting.transform.rotation.eulerAngles.z;
                 selectedPainting.transform.position = hit.point;
                 selectedPainting.transform.forward = -1*hit.normal;
+                selectedPainting.transform.rotation =  Quaternion.Euler(selectedPainting.transform.rotation.eulerAngles.x,selectedPainting.transform.rotation.eulerAngles.y,zRot);
                 UnListObject();
-                
             }
         }
     }
@@ -103,7 +103,7 @@ public class SelectingManager : MonoBehaviour
                 // Instantiate the prefab
                 GameObject obj = Instantiate(cell.paintingSpecialPrefab);
                 // Change the quad art
-                SpawnPainitng newPainting = obj.GetComponent<SpawnPainitng>();
+                SpawnPainting newPainting = obj.GetComponent<SpawnPainting>();
                 newPainting.quadArt.GetComponent<Renderer>().material.mainTexture = cell.imageComponent.mainTexture;
                 // Change its transform
                 obj.transform.position = oldPaintingPosition;
