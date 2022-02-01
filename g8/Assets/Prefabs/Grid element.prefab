@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5330967495833751088}
   - component: {fileID: 3669264146522010158}
   - component: {fileID: 6556881203249766140}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Grid element
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -8504678537008250367, guid: 5c7cad8d2b20613408bae1d6fac591f4, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SelectingManager, Assembly-CSharp
         m_MethodName: UIpaintingSelected
         m_Mode: 2
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3332a0792f867ab4db840e62e11eeabc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 45e10cfe4cf730748b2a985248d026c2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -145,5 +145,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c98c8c7fb6ac3e4dadca4e682c97387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  images: []
-  imageComponent: {fileID: 0}
+  images:
+  - {fileID: 21300000, guid: 45e10cfe4cf730748b2a985248d026c2, type: 3}
+  - {fileID: 21300000, guid: 92e3c96ab9bea4844a5933a3eb62aa78, type: 3}
+  - {fileID: 21300000, guid: e5b9667557d87e4409be96843c70439f, type: 3}
+  - {fileID: 21300000, guid: 3756ae71988884c4b8684b9ca45f072b, type: 3}
+  imageComponent: {fileID: 3669264146522010158}
+  artIsNull: 1

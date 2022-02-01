@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: 20ee13ae802a082419f7e8a9447217d3
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
     path: Assets/Scenes/CosmicGallery.unity
     guid: b48eb7cd18e0709449e4a79ce7312131
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/NatureGallery.unity
     guid: d6e2227d91eda394a83cf1daa4e8d427
   m_configObjects:
