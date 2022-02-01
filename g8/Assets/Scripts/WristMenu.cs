@@ -9,7 +9,7 @@ public class WristMenu : MonoBehaviour
     public GameObject wristUI;
     public Text artThemeText;
     public GridElement[] cells;
-    public int artThemeCode = 0;
+    public int artThemeCode = 0; // 0 to 4
     public InputActionReference toggleReference = null; //for toggle UI Wrist
 
 
@@ -42,7 +42,7 @@ public class WristMenu : MonoBehaviour
     }
     
     public void IncreaseThemeCode(){
-        if(artThemeCode >= 3){
+        if(artThemeCode >= 4){
             artThemeCode = 0;
         }
         else{
@@ -54,7 +54,7 @@ public class WristMenu : MonoBehaviour
 
     public void DecreaseThemeCode(){
         if(artThemeCode <= 0){
-            artThemeCode = 3;
+            artThemeCode = 4;
         }
         else{
             artThemeCode--;
@@ -75,6 +75,9 @@ public class WristMenu : MonoBehaviour
         }
         else if(artThemeCode == 3){
             artThemeText.text = "DARK";
+        }
+        else if(artThemeCode == 4){
+            artThemeText.text = "SPECIAL";
         }
     }
 }

@@ -13,19 +13,28 @@ public class SelectingManager : MonoBehaviour
     public XRRayInteractor interactor;
     public InputActionReference resizingReference = null; //for resizing paintings
 
-    void Awake()
+    /*void Awake()
     {
         resizingReference.action.started += ResizePainting;
     }
     
     void OnDestroy(){
         resizingReference.action.started -= ResizePainting;
-    }
+    }*/
 
-    private void ResizePainting(InputAction.CallbackContext context){
+    /*private void ResizePainting(InputAction.CallbackContext context){
+        if(selectedPainting == null) return;
+
+        float scaleMultiplier = 1;
+       // Vector3 distance = Vector3.Distance(leftControllerPos, rightContollerpos);
+
+        selectedPainting.transform.localScale = new Vector3(
+            selectedPainting.transform.localScale.x * distance.x * scaleMultiplier,
+            selectedPainting.transform.localScale.y * distance.y * scaleMultiplier,
+            selectedPainting.transform.localScale.z * distance.z * scaleMultiplier);
 
         
-    }
+    }*/
 
     public void ListSelectedPainting(Painting painting){
         DebugText.text += "\nObject listed: "+ painting.name;
@@ -60,23 +69,12 @@ public class SelectingManager : MonoBehaviour
     }
 
 
-    public void ArtButtonSelected(){
-        // the art button sends the correct paintings to the WristUI
-        // open the WristUI
-
-        // Go to the grid and for each slot find its Image component and replace it with the thematic art
-
-
-    }
-
 
     public void UIpaintingSelected(Image image){
         // check if there is listedPainting
         if(selectedPainting!=null){
             // find the selectedPainting Image component and replace it.
             selectedPainting.quadArt.GetComponent<Renderer>().material.mainTexture = image.mainTexture;
-            // make UI painting slot unnavailable ? - not if we want to place the same painting multiple times.
-            image.sprite = null;
             // unlist the selected painting
             UnListObject();
         }
