@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 992350627608714114}
   - component: {fileID: -4057384247236151529}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Capsule 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a52d4576bc3a35646b851d575b3c964c, type: 2}
+  - {fileID: 2100000, guid: 4d5abc915afb91e42a37cfb59752e8f3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -26,4 +26,8 @@ public class SoundPainting : Painting
     {
         source.Pause();
     }
+
+    public void SetAudioClip(AudioClip ac){
+        clip = ac;
+    }
 }

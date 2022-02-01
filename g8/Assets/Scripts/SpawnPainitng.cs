@@ -27,4 +27,8 @@ public class SpawnPainitng : Painting
     {
         Destroy(prefabInstance);
     }
+
+    public void SetPrefab(GameObject pref){
+        prefab = pref;
+    }
 }

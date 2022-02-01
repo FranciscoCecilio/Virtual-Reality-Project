@@ -45,7 +45,6 @@ public class SelectingManager : MonoBehaviour
     }
     
     public void UnListObject(){
-        DebugText.text += "\n" + selectedPainting.name + " unlisted";
         selectedPainting.OnDeselectedCustom();
         selectedPainting = null;
         // replace the original layermask
@@ -70,13 +69,64 @@ public class SelectingManager : MonoBehaviour
 
 
 
-    public void UIpaintingSelected(Image image){
+    public void UIpaintingSelected(GridElement cell){
         // check if there is listedPainting
         if(selectedPainting!=null){
-            // find the selectedPainting Image component and replace it.
-            selectedPainting.quadArt.GetComponent<Renderer>().material.mainTexture = image.mainTexture;
-            // unlist the selected painting
-            UnListObject();
+            // keep painting position
+            Vector3 oldPaintingPosition = selectedPainting.transform.position;
+            Quaternion oldPaintingRotation = selectedPainting.transform.rotation;
+            // Unlist and Destroy selectedPainting
+            Destroy(selectedPainting.gameObject);  
+            selectedPainting = null;
+            interactor.raycastMask = LayerMask.GetMask("InteractibleObjects", "UI");
+
+            // Instantiate the new painting
+            if(cell.GetThemeCode() != 4){  // Simple Painting
+                // Instantiate the prefab
+                GameObject obj = Instantiate(cell.paintingSimplePrefab);
+                // Change the quad art
+                Painting newPainting = obj.GetComponent<Painting>();
+                newPainting.quadArt.GetComponent<Renderer>().material.mainTexture = cell.imageComponent.mainTexture;
+                // Change its position
+                obj.transform.position = oldPaintingPosition;
+                obj.transform.rotation = oldPaintingRotation;
+            } 
+            else if(cell.type == PaintingType.Sound){ 
+                // Instantiate the prefab
+                GameObject obj = Instantiate(cell.paintingSpecialPrefab);
+                // Change the quad art
+                SoundPainting newPainting = obj.GetComponent<SoundPainting>();
+                newPainting.quadArt.GetComponent<Renderer>().material.mainTexture = cell.imageComponent.mainTexture;
+                // Change its position
+                obj.transform.position = oldPaintingPosition;
+                obj.transform.rotation = oldPaintingRotation;
+                // Set the audioClip
+                newPainting.SetAudioClip(cell.clip);
+            }
+            else if(cell.type == PaintingType.Teleport){ 
+                // Instantiate the prefab
+                GameObject obj = Instantiate(cell.paintingSpecialPrefab);
+                // Change the quad art
+                TeleportPaintng newPainting = obj.GetComponent<TeleportPaintng>();
+                newPainting.quadArt.GetComponent<Renderer>().material.mainTexture = cell.imageComponent.mainTexture;
+                // Change its position
+                obj.transform.position = oldPaintingPosition;
+                obj.transform.rotation = oldPaintingRotation;
+                // Set the skybox
+                newPainting.SetSkyboxMat(cell.skyboxMat);
+            } 
+            else if(cell.type == PaintingType.Spawn){ 
+                // Instantiate the prefab
+                GameObject obj = Instantiate(cell.paintingSpecialPrefab);
+                // Change the quad art
+                SpawnPainitng newPainting = obj.GetComponent<SpawnPainitng>();
+                newPainting.quadArt.GetComponent<Renderer>().material.mainTexture = cell.imageComponent.mainTexture;
+                // Change its position
+                obj.transform.position = oldPaintingPosition;
+                obj.transform.rotation = oldPaintingRotation;
+                // Set the audioClip
+                newPainting.SetPrefab(cell.prefabObject);
+            }   
         }
         else{
             // UI message "There is no painting selected".

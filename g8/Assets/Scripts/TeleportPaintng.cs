@@ -14,4 +14,8 @@ public class TeleportPaintng : Painting
             base.player.position = new Vector3(0,base.player.position.y,0);
         }
     }
+
+    public void SetSkyboxMat(Material mat){
+        skyboxMat = mat;
+    }
 }
