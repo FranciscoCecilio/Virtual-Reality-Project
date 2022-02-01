@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnPainitng : Painting
+public class SpawnPainting : Painting
 {
     public GameObject prefab;
     public Transform targetPosition;

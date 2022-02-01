@@ -16,6 +16,11 @@ public class ScalingManager : MonoBehaviour
     public void rightOff(InputAction.CallbackContext ctx) => isRightOn = false;
 
     
+    float initialDistance = 1.0f;
+
+    float maxRemoteInitialDistance = 0.3f;
+    
+    bool startedScaling = false; // this variable is used to unlist in the end of scaling
 
     // manually insert the transforms
     public Transform leftRemote = null;
@@ -34,10 +39,7 @@ public class ScalingManager : MonoBehaviour
 
     }
 
-    float initialDistance = 1.0f;
-
-    float maxRemoteInitialDistance = 0.3f;
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -50,6 +52,7 @@ public class ScalingManager : MonoBehaviour
         {
             if (isScaling)
             {
+                startedScaling = true;   
                 float currentDistance = (leftRemote.position - rightRemote.position).magnitude;
                 float scaleFactor = currentDistance / initialDistance;
                 //if (initialDistance > maxRemoteInitialDistance)
@@ -57,6 +60,13 @@ public class ScalingManager : MonoBehaviour
 
                 scaleFactor = Mathf.Clamp(scaleFactor, 0.1f, 2.0f);
                 selectingManager.selectedPainting.transform.localScale = new Vector3(scaleFactor, scaleFactor, selectingManager.selectedPainting.transform.localScale.z);
+            }
+            else{
+                // When we end the operation, we want to Unlist and deselct the painting
+                if(startedScaling){
+                    startedScaling = false;
+                    selectingManager.UnListObject();
+                }
             }
 
             isScaling = isRightOn && isLeftOn;

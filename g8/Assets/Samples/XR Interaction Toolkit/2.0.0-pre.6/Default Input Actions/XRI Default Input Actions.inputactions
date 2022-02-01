@@ -1158,6 +1158,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "RotatingPainting",
+            "id": "864f04bf-4b7c-450f-84f7-f0b932fbddea",
+            "actions": [
+                {
+                    "name": "RotatePainting",
+                    "type": "Button",
+                    "id": "bc04baf0-6983-4d74-af95-6fb787f256ea",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "02f2c529-6be8-4fc5-95e6-85e3d73c7f4e",
+                    "path": "<PXR_Controller>/thumbstickClicked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotatePainting",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

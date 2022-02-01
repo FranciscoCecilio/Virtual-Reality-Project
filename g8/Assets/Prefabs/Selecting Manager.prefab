@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5906530544826463867}
   - component: {fileID: -8504678537008250367}
   - component: {fileID: 2857375498552121144}
+  - component: {fileID: 5906530545386215332}
   m_Layer: 0
   m_Name: Selecting Manager
   m_TagString: Untagged
@@ -63,4 +64,18 @@ MonoBehaviour:
   rightTrigger: {fileID: -3246552965430507305, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   leftRemote: {fileID: 0}
   rightRemote: {fileID: 0}
+  selectingManager: {fileID: -8504678537008250367}
+--- !u!114 &5906530545386215332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5906530544826463861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303099d963a4e924dbd819ac348fc3e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAction: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   selectingManager: {fileID: -8504678537008250367}

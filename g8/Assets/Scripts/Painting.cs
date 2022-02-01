@@ -25,6 +25,7 @@ public class Painting : MonoBehaviour
         defaultMaterial = GetComponent<Renderer>().material;
         DebugText = GameObject.FindGameObjectsWithTag("DebugText")[0].GetComponent<Text>();
         sM = FindObjectOfType<SelectingManager>();
+        
     }
     
     // when the painting is selected, it becomes moveable until we press Trigger button again.
