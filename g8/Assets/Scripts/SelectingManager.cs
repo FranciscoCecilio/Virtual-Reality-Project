@@ -11,43 +11,25 @@ public class SelectingManager : MonoBehaviour
     public Painting selectedPainting;
     public Text DebugText;
     public XRRayInteractor interactor;
-    public InputActionReference resizingReference = null; //for resizing paintings
-
-    /*void Awake()
-    {
-        resizingReference.action.started += ResizePainting;
-    }
-    
-    void OnDestroy(){
-        resizingReference.action.started -= ResizePainting;
-    }*/
-
-    /*private void ResizePainting(InputAction.CallbackContext context){
-        if(selectedPainting == null) return;
-
-        float scaleMultiplier = 1;
-       // Vector3 distance = Vector3.Distance(leftControllerPos, rightContollerpos);
-
-        selectedPainting.transform.localScale = new Vector3(
-            selectedPainting.transform.localScale.x * distance.x * scaleMultiplier,
-            selectedPainting.transform.localScale.y * distance.y * scaleMultiplier,
-            selectedPainting.transform.localScale.z * distance.z * scaleMultiplier);
-
-        
-    }*/
 
     public void ListSelectedPainting(Painting painting){
-        DebugText.text += "\nObject listed: "+ painting.name;
         selectedPainting = painting;
-        // now, we only want to select Walls
+        // now, we only want to select Walls e GUI
         LayerMask mask = LayerMask.GetMask("Walls","UI");
         interactor.raycastMask = mask;
     }
     
+    // When we want to deselect an object
     public void UnListObject(){
         selectedPainting.OnDeselectedCustom();
         selectedPainting = null;
-        // replace the original layermask
+        interactor.raycastMask = LayerMask.GetMask("InteractibleObjects", "UI");
+    }
+
+    // When we replace a painting we must also destroy it
+    public void UnlistAndDestroy(){
+        Destroy(selectedPainting.gameObject);  
+        selectedPainting = null;
         interactor.raycastMask = LayerMask.GetMask("InteractibleObjects", "UI");
     }
 
@@ -72,13 +54,12 @@ public class SelectingManager : MonoBehaviour
     public void UIpaintingSelected(GridElement cell){
         // check if there is listedPainting
         if(selectedPainting!=null){
-            // keep painting position
+            // keep painting transform
             Vector3 oldPaintingPosition = selectedPainting.transform.position;
             Quaternion oldPaintingRotation = selectedPainting.transform.rotation;
+            Vector3 oldPaintingScale = selectedPainting.transform.localScale;
             // Unlist and Destroy selectedPainting
-            Destroy(selectedPainting.gameObject);  
-            selectedPainting = null;
-            interactor.raycastMask = LayerMask.GetMask("InteractibleObjects", "UI");
+            UnlistAndDestroy();
 
             // Instantiate the new painting
             if(cell.GetThemeCode() != 4){  // Simple Painting
@@ -87,9 +68,10 @@ public class SelectingManager : MonoBehaviour
                 // Change the quad art
                 Painting newPainting = obj.GetComponent<Painting>();
                 newPainting.quadArt.GetComponent<Renderer>().material.mainTexture = cell.imageComponent.mainTexture;
-                // Change its position
+                // Change its transform
                 obj.transform.position = oldPaintingPosition;
                 obj.transform.rotation = oldPaintingRotation;
+                obj.transform.localScale = oldPaintingScale;
             } 
             else if(cell.type == PaintingType.Sound){ 
                 // Instantiate the prefab
@@ -97,9 +79,10 @@ public class SelectingManager : MonoBehaviour
                 // Change the quad art
                 SoundPainting newPainting = obj.GetComponent<SoundPainting>();
                 newPainting.quadArt.GetComponent<Renderer>().material.mainTexture = cell.imageComponent.mainTexture;
-                // Change its position
+                // Change its transform
                 obj.transform.position = oldPaintingPosition;
                 obj.transform.rotation = oldPaintingRotation;
+                obj.transform.localScale = oldPaintingScale;
                 // Set the audioClip
                 newPainting.SetAudioClip(cell.clip);
             }
@@ -109,9 +92,10 @@ public class SelectingManager : MonoBehaviour
                 // Change the quad art
                 TeleportPaintng newPainting = obj.GetComponent<TeleportPaintng>();
                 newPainting.quadArt.GetComponent<Renderer>().material.mainTexture = cell.imageComponent.mainTexture;
-                // Change its position
+                // Change its transform
                 obj.transform.position = oldPaintingPosition;
                 obj.transform.rotation = oldPaintingRotation;
+                obj.transform.localScale = oldPaintingScale;
                 // Set the skybox
                 newPainting.SetSkyboxMat(cell.skyboxMat);
             } 
@@ -121,9 +105,10 @@ public class SelectingManager : MonoBehaviour
                 // Change the quad art
                 SpawnPainitng newPainting = obj.GetComponent<SpawnPainitng>();
                 newPainting.quadArt.GetComponent<Renderer>().material.mainTexture = cell.imageComponent.mainTexture;
-                // Change its position
+                // Change its transform
                 obj.transform.position = oldPaintingPosition;
                 obj.transform.rotation = oldPaintingRotation;
+                obj.transform.localScale = oldPaintingScale;
                 // Set the audioClip
                 newPainting.SetPrefab(cell.prefabObject);
             }   

@@ -10,15 +10,19 @@ public class ScalingManager : MonoBehaviour
 
     bool isLeftOn, isRightOn, isScaling = false;
 
-    public void leftOn(InputAction.CallbackContext ctx) { isLeftOn = true; Debug.Log("LEFT ON"); }
-    public void leftOff(InputAction.CallbackContext ctx) { isLeftOn = false; Debug.Log("LEFT OFF"); }
-        public void rightOn(InputAction.CallbackContext ctx) => isRightOn = true;
+    public void leftOn(InputAction.CallbackContext ctx)  => isLeftOn = true; 
+    public void leftOff(InputAction.CallbackContext ctx)  => isLeftOn = false; 
+    public void rightOn(InputAction.CallbackContext ctx) => isRightOn = true;
     public void rightOff(InputAction.CallbackContext ctx) => isRightOn = false;
 
-    public Transform paintingTransform = null;
+    
 
+    // manually insert the transforms
     public Transform leftRemote = null;
     public Transform rightRemote = null;
+
+    // to check if there is a painting selected
+    public SelectingManager selectingManager;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +46,7 @@ public class ScalingManager : MonoBehaviour
             initialDistance = (leftRemote.position - rightRemote.position).magnitude;
         }
 
-        if (paintingTransform)
+        if (selectingManager.selectedPainting!=null)
         {
             if (isScaling)
             {
@@ -52,7 +56,7 @@ public class ScalingManager : MonoBehaviour
                 //    scaleFactor = (currentDistance - initialDistance + maxRemoteInitialDistance) / maxRemoteInitialDistance;
 
                 scaleFactor = Mathf.Clamp(scaleFactor, 0.1f, 2.0f);
-                paintingTransform.localScale = new Vector3(scaleFactor, scaleFactor, 0);
+                selectingManager.selectedPainting.transform.localScale = new Vector3(scaleFactor, scaleFactor, selectingManager.selectedPainting.transform.localScale.z);
             }
 
             isScaling = isRightOn && isLeftOn;

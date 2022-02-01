@@ -191,6 +191,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 065d7292b4719264284743d6a9c0f4cc, type: 3}
+--- !u!4 &165585584 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1579055058373055411, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+  m_PrefabInstance: {fileID: 1579055058339592000}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &223974227 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: -8504678537008250367, guid: 5c7cad8d2b20613408bae1d6fac591f4, type: 3}
@@ -930,6 +935,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!4 &892549684 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1579055059254942111, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+  m_PrefabInstance: {fileID: 1579055058339592000}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &948503551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2047,6 +2057,14 @@ PrefabInstance:
       propertyPath: interactor
       value: 
       objectReference: {fileID: 33645814}
+    - target: {fileID: 2857375498552121144, guid: 5c7cad8d2b20613408bae1d6fac591f4, type: 3}
+      propertyPath: leftRemote
+      value: 
+      objectReference: {fileID: 892549684}
+    - target: {fileID: 2857375498552121144, guid: 5c7cad8d2b20613408bae1d6fac591f4, type: 3}
+      propertyPath: rightRemote
+      value: 
+      objectReference: {fileID: 165585584}
     - target: {fileID: 5906530544826463861, guid: 5c7cad8d2b20613408bae1d6fac591f4, type: 3}
       propertyPath: m_Name
       value: Selecting Manager
