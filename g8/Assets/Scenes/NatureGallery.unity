@@ -298,7 +298,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &83315407
 PrefabInstance:
@@ -587,6 +587,86 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 1fd61b60a9306e54ebc58aaa3b5a6d00, type: 3}
+    - target: {fileID: 6618636331927027644, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 35398762}
+    - target: {fileID: 6618636331927027644, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UIpaintingSelected
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618636331927027644, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 83315410}
+    - target: {fileID: 6618636331927027644, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: GridElement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634515304177893132, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 35398762}
+    - target: {fileID: 6634515304177893132, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UIpaintingSelected
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634515304472661871, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 35398762}
+    - target: {fileID: 6634515304472661871, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UIpaintingSelected
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634515304713500564, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 35398762}
+    - target: {fileID: 6634515304713500564, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UIpaintingSelected
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634515304832641255, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 35398762}
+    - target: {fileID: 6634515304832641255, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UIpaintingSelected
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634515305461389051, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 35398762}
+    - target: {fileID: 6634515305461389051, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UIpaintingSelected
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634515305510214832, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 35398762}
+    - target: {fileID: 6634515305510214832, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UIpaintingSelected
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634515305635231322, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 35398762}
+    - target: {fileID: 6634515305635231322, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UIpaintingSelected
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634515305873238695, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 35398762}
+    - target: {fileID: 6634515305873238695, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UIpaintingSelected
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
 --- !u!4 &83315408 stripped
@@ -599,6 +679,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1579055059254942111, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
   m_PrefabInstance: {fileID: 83315407}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &83315410 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5251127531048890224, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
+  m_PrefabInstance: {fileID: 83315407}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c98c8c7fb6ac3e4dadca4e682c97387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &141884819
 GameObject:
   m_ObjectHideFlags: 0
