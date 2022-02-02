@@ -6,9 +6,13 @@ public class MatrixMaker : MonoBehaviour
 {
     public Transform pointA;
     public Transform pointB;
+    public GameObject placeholderPrefab;
 
     public float minRowHeight = 2;
     public float minColWidth = 2;
+
+    // bool exists to prevent placeholders to be deleted after operation ends
+    public bool isBuildingGrid;
 
     public List<List<Vector3>> CreateMatrix(Vector3 initialPoint, Vector3 finalPoint)
     {
@@ -48,7 +52,7 @@ public class MatrixMaker : MonoBehaviour
 
     List<GameObject> markers = new List<GameObject>();
 
-    void Visualize(List<List<Vector3>> matrix)
+    public void VisualizeMatrix(List<List<Vector3>> matrix)
     {
         foreach (var obj in markers)
             Destroy(obj);
@@ -60,26 +64,22 @@ public class MatrixMaker : MonoBehaviour
             {
                 Vector3 point = matrix[i][j];
 
-                GameObject marker = Instantiate(pointA.gameObject);
+                GameObject marker = Instantiate(placeholderPrefab);
                 markers.Add(marker);
                 marker.transform.position = point;
             }
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        var Matrix = CreateMatrix(pointA.position, pointB.position);
-        Debug.Log(Matrix.Count);
-        if (Matrix.Count > 0)
-            Debug.Log(Matrix[0].Count);
-        Visualize(Matrix);
+        if(isBuildingGrid){
+            var Matrix = CreateMatrix(pointA.position, pointB.position);
+            /*Debug.Log(Matrix.Count);
+            if (Matrix.Count > 0)
+            Debug.Log(Matrix[0].Count);*/
+            VisualizeMatrix(Matrix);
+        }
     }
 }

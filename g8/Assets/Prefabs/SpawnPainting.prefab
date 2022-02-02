@@ -125,13 +125,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4676101047520326388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c713ec0b3fbe73446b42621b8c980026, type: 3}
+  m_Script: {fileID: 11500000, guid: ab701528ee91e1c4cbb64c4a4b41047c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   quadArt: {fileID: 6599894713194387156}
   semiTransparentMaterial: {fileID: 2100000, guid: cb4dcc91ff4a4a340a7952fe8f49a579, type: 2}
   player: {fileID: 0}
-  prefab: {fileID: 1077582805584767243, guid: 1bb1f6c9d68720a489b2430e5d7fc5e5, type: 3}
+  prefab: {fileID: 919132149155446097, guid: 19ccb02c9fcaace4ba84fd7f073252ed, type: 3}
   targetPosition: {fileID: 4220306249224688091}
 --- !u!1 &4676101047705091004
 GameObject:

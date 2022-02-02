@@ -42,7 +42,7 @@ public class Rotation : MonoBehaviour
             else{
                 if(startedRotating){
                 startedRotating = false;
-                selectingManager.UnListObject();
+                //selectingManager.UnListObject();
                 }
             }
         }
