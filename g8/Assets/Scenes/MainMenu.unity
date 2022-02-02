@@ -3163,7 +3163,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 11}
+  m_AnchoredPosition: {x: 0, y: 14.06}
   m_SizeDelta: {x: 190, y: 140.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1691358529
@@ -3188,7 +3188,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: a84fd637959915644a7fcca8001170de, type: 3}
-    m_FontSize: 11
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -3199,7 +3199,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Interactive VR gallery where you can explore art without leaving home.
+  m_Text: You are about to enter an Interactive VR gallery where you can explore
+    art without leaving home.
 --- !u!222 &1691358530
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3638,14 +3639,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Right grip - Select paintings and ART
+  m_Text: 'Right trigger - Select paintings and UI
 
-    Right trigger  - Select Buttons
+    Press and Drag Right Trigger
+    - Wall
 
-    Right
-    joystick - Walk
+    Both Grips pressed  - Scale Painting
 
-    Left joystick - Rotation of the head
+    Right joystick - Rotate
+    Painting
+
+    Left joystick - Walk
 
 '
 --- !u!222 &2004946783
