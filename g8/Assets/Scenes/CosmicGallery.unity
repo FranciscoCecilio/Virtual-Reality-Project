@@ -1232,31 +1232,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 204ef55864c1e9140ac2474c00ff2d9b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.91668934
+      value: 0.74192977
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 204ef55864c1e9140ac2474c00ff2d9b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.37554246
+      value: 0.549766
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 204ef55864c1e9140ac2474c00ff2d9b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.09125322
+      value: 0.38107604
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 204ef55864c1e9140ac2474c00ff2d9b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.10159439
+      value: 0.0455929
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 204ef55864c1e9140ac2474c00ff2d9b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 44.996
+      value: 51.355
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 204ef55864c1e9140ac2474c00ff2d9b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 7.393
+      value: 80.313
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 204ef55864c1e9140ac2474c00ff2d9b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -9.583
+      value: 51.195
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204ef55864c1e9140ac2474c00ff2d9b, type: 3}
@@ -1571,9 +1571,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.21960784, g: 0.21960784, b: 0.21960784, a: 1}
-  m_Intensity: 3
+  m_Intensity: 4
   m_Range: 10
-  m_SpotAngle: 72.1
+  m_SpotAngle: 73.5
   m_InnerSpotAngle: 55.233658
   m_CookieSize: 10
   m_Shadows:
@@ -1871,9 +1871,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.5613208, g: 0.84326833, b: 1, a: 1}
-  m_Intensity: 3
+  m_Intensity: 2.5
   m_Range: 10
-  m_SpotAngle: 72.1
+  m_SpotAngle: 102.9
   m_InnerSpotAngle: 55.233658
   m_CookieSize: 10
   m_Shadows:
@@ -1990,31 +1990,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 204ef55864c1e9140ac2474c00ff2d9b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.11345149
+      value: -0.037495635
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 204ef55864c1e9140ac2474c00ff2d9b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.013548765
+      value: 0.14824648
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 204ef55864c1e9140ac2474c00ff2d9b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9500096
+      value: -0.888116
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 204ef55864c1e9140ac2474c00ff2d9b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.29056337
+      value: 0.43343642
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 204ef55864c1e9140ac2474c00ff2d9b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 33.721
+      value: 49.356
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 204ef55864c1e9140ac2474c00ff2d9b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -194.46
+      value: -197.43
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 204ef55864c1e9140ac2474c00ff2d9b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -2.769
+      value: -27.011
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204ef55864c1e9140ac2474c00ff2d9b, type: 3}
@@ -2648,7 +2648,7 @@ Light:
   m_Color: {r: 1, g: 0.7305019, b: 0.7028302, a: 1}
   m_Intensity: 3
   m_Range: 10
-  m_SpotAngle: 72.1
+  m_SpotAngle: 90.5
   m_InnerSpotAngle: 55.233658
   m_CookieSize: 10
   m_Shadows:
@@ -2895,6 +2895,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallGrid
       objectReference: {fileID: 0}
+    - target: {fileID: 3033148027660978850, guid: fa37e449b3f60bb40a81f732de5344d0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 278605e126bfe364ab79edc92bfe116e, type: 2}
     - target: {fileID: 3033148027660978860, guid: fa37e449b3f60bb40a81f732de5344d0, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3087,7 +3091,7 @@ Light:
   m_Color: {r: 1, g: 0, b: 0.6201916, a: 1}
   m_Intensity: 3
   m_Range: 10
-  m_SpotAngle: 77.2
+  m_SpotAngle: 102.3
   m_InnerSpotAngle: 59.691868
   m_CookieSize: 10
   m_Shadows:
