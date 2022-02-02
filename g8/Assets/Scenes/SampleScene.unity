@@ -1644,10 +1644,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8504678537008250367, guid: 5c7cad8d2b20613408bae1d6fac591f4, type: 3}
-      propertyPath: DebugText
-      value: 
-      objectReference: {fileID: 1384887629}
-    - target: {fileID: -8504678537008250367, guid: 5c7cad8d2b20613408bae1d6fac591f4, type: 3}
       propertyPath: interactor
       value: 
       objectReference: {fileID: 33645814}

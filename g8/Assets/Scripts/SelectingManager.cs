@@ -12,6 +12,19 @@ public class SelectingManager : MonoBehaviour
     //public Text DebugText;
     public XRRayInteractor interactor;
 
+    public InputActionReference deleteAction;
+    
+    void Start()
+    {
+        deleteAction.action.performed += DeleteAction;
+    }
+
+    // clicking the right controller primary button will destroy the painting
+    public void DeleteAction(InputAction.CallbackContext ctx){
+        UnlistAndDestroy();
+    } 
+
+
     public void ListSelectedPainting(Painting painting){
         selectedPainting = painting;
         // now, we only want to select Walls e GUI
@@ -33,7 +46,7 @@ public class SelectingManager : MonoBehaviour
         interactor.raycastMask = LayerMask.GetMask("InteractibleObjects", "UI");
     }
 
-
+    
     public void WallSelected(SelectEnterEventArgs args){
         //DebugText.text += "\nWall+selected: " + selectedPainting.name;
         // If we have a painting ready to be moved

@@ -718,6 +718,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Delete",
+                    "type": "Button",
+                    "id": "538db963-63b1-4e0d-8846-6485c261d37a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1070,6 +1079,17 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "UI Press Value",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b78a9b5a-322f-4ce1-8d6f-5e91d9d67084",
+                    "path": "<PXR_Controller>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Delete",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
