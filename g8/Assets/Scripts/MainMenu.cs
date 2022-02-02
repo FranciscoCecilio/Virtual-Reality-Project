@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     public bool optionsActive = false;
 
     public void NaturalScene(){
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("NatureGallery");
     }
 
     public void DarkScene(){
