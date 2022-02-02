@@ -21,7 +21,9 @@ public class SpawnPainting : Painting
         prefabInstance = Instantiate(prefab);
         prefabInstance.transform.parent = targetPosition;
         prefabInstance.transform.localPosition = Vector3.zero;
+        prefabInstance.transform.rotation = Quaternion.Euler(0,180,0);
         prefabInstance.AddComponent<Rigidbody>();
+        prefabInstance.AddComponent<BoxCollider>();
     }
 
     private void OnTriggerExit(Collider other)

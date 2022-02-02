@@ -15,7 +15,7 @@ public class Painting : MonoBehaviour
     //designated to teleport
     [HideInInspector] public Transform player;
 
-    Text DebugText;
+    //Text DebugText;
     bool selected = false;
 
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class Painting : MonoBehaviour
     {
         //myCollider = GetComponent<BoxCollider>();
         defaultMaterial = GetComponent<Renderer>().material;
-        DebugText = GameObject.FindGameObjectsWithTag("DebugText")[0].GetComponent<Text>();
+        //DebugText = GameObject.FindGameObjectsWithTag("DebugText")[0].GetComponent<Text>();
         sM = FindObjectOfType<SelectingManager>();
         
     }
@@ -55,7 +55,7 @@ public class Painting : MonoBehaviour
 
     public virtual void Execute()
     {
-        DebugText.text += "\nExecuted";
+        //DebugText.text += "\nExecuted";
     }
 
     private void OnTriggerEnter(Collider other)
