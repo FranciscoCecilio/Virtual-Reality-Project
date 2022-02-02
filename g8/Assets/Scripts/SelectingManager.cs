@@ -9,7 +9,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class SelectingManager : MonoBehaviour
 {
     public Painting selectedPainting;
-    public Text DebugText;
+    //public Text DebugText;
     public XRRayInteractor interactor;
 
     public void ListSelectedPainting(Painting painting){
@@ -35,7 +35,7 @@ public class SelectingManager : MonoBehaviour
 
 
     public void WallSelected(SelectEnterEventArgs args){
-        DebugText.text += "\nWall+selected: " + selectedPainting.name;
+        //DebugText.text += "\nWall+selected: " + selectedPainting.name;
         // If we have a painting ready to be moved
         if(selectedPainting != null){
             RaycastHit hit;
@@ -115,7 +115,7 @@ public class SelectingManager : MonoBehaviour
         }
         else{
             // UI message "There is no painting selected".
-            DebugText.text += "\nThere is no SelectedPainting";
+            //DebugText.text += "\nThere is no SelectedPainting";
         }
         
         
