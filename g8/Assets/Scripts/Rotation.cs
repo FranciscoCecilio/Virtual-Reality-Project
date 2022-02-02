@@ -33,7 +33,7 @@ public class Rotation : MonoBehaviour
         if(selectingManager.selectedPainting != null){
             if(isRotating){
                 startedRotating = true;
-                Vector3 euler = new Vector3(0, 0, value.x);
+                Vector3 euler = new Vector3(0, 0, -value.x);
                 Quaternion rot = Quaternion.identity;
                 rot.eulerAngles = euler;
                 selectingManager.selectedPainting.transform.rotation *= rot;
