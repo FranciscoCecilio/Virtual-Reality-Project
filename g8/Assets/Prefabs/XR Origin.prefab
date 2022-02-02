@@ -2441,7 +2441,7 @@ PrefabInstance:
     - target: {fileID: 6556881203249766140, guid: 02737ef68bc2ab84787a5d60c27b04e7, type: 3}
       propertyPath: clip
       value: 
-      objectReference: {fileID: 8300000, guid: 5ced00835cda3224893c920e7d19df59, type: 3}
+      objectReference: {fileID: 8300000, guid: 2f5f06771b35cc24b8a8316cbf2e6bdd, type: 3}
     - target: {fileID: 6556881203249766140, guid: 02737ef68bc2ab84787a5d60c27b04e7, type: 3}
       propertyPath: artIsNull
       value: 0

@@ -690,74 +690,38 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1352940341}
-    - target: {fileID: 6618636331927027644, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UIpaintingSelected
-      objectReference: {fileID: 0}
     - target: {fileID: 6634515304177893132, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1352940341}
-    - target: {fileID: 6634515304177893132, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UIpaintingSelected
-      objectReference: {fileID: 0}
     - target: {fileID: 6634515304472661871, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1352940341}
-    - target: {fileID: 6634515304472661871, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UIpaintingSelected
-      objectReference: {fileID: 0}
     - target: {fileID: 6634515304713500564, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1352940341}
-    - target: {fileID: 6634515304713500564, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UIpaintingSelected
-      objectReference: {fileID: 0}
     - target: {fileID: 6634515304832641255, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1352940341}
-    - target: {fileID: 6634515304832641255, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UIpaintingSelected
-      objectReference: {fileID: 0}
     - target: {fileID: 6634515305461389051, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1352940341}
-    - target: {fileID: 6634515305461389051, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UIpaintingSelected
-      objectReference: {fileID: 0}
     - target: {fileID: 6634515305510214832, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1352940341}
-    - target: {fileID: 6634515305510214832, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UIpaintingSelected
-      objectReference: {fileID: 0}
     - target: {fileID: 6634515305635231322, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1352940341}
-    - target: {fileID: 6634515305635231322, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UIpaintingSelected
-      objectReference: {fileID: 0}
     - target: {fileID: 6634515305873238695, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1352940341}
-    - target: {fileID: 6634515305873238695, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UIpaintingSelected
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa5429bd6bb1897468bb1754ff76e602, type: 3}
 --- !u!4 &189848751 stripped
