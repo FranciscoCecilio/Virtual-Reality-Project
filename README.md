@@ -4,3 +4,5 @@ There are 3 special painting-types that activate when the user gets close to the
 1) Sound paintings, that play music;
 2) Spawn paintings, that spawn a virtual creature;
 3) Skybox paintings, that change the skybox of the virtual room to match the landscape in the painting.
+
+VIDEO LINK: https://youtu.be/-zO3Zilguvs
