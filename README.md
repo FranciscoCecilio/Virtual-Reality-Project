@@ -1,5 +1,5 @@
 # Virtual-Reality-Project
-We designed a virtual room, where the user can create and manipulate (rescale, move, delete) paitings using VR-commands.
+We designed a virtual room, where the user can create and manipulate (rescale, move, delete) paitings using PICO VR-commands.
 There are 3 special painting-types that activate when the user gets close to them: 
 1) Sound paintings, that play music;
 2) Spawn paintings, that spawn a virtual creature;
